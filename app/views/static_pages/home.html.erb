@@ -1,0 +1,13 @@
+<%= provide(:title , 'Home') %>
+<div class="center jumbotron">
+  <div class="row" >
+    <% if user_signed_in? %>
+    <strong>Welcome <%= current_user.email %></strong>
+    <%= link_to 'Create Project', new_project_path, class: 'btn btn-info' %>
+    <% else %>
+    <strong> Please Sign In </strong>
+    <% end %>
+
+  </div>
+
+</div>
